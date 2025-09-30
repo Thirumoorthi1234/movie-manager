@@ -1,0 +1,22 @@
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+.env
+.env.local
+.DS_Store
+
+# Backend (Node / Python)
+__pycache__/
+venv/
+.env
+*.log
+
+# Editors / IDE
+.vscode/
+.idea/
+
+# General
+coverage/
+*.sqlite

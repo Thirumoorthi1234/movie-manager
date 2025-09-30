@@ -1,0 +1,214 @@
+/* ------------------------------
+   Global & Body
+-------------------------------- */
+/* ------------------------------
+   Global & Body
+-------------------------------- */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  /* Professional 2-color gradient background */
+  background: linear-gradient(135deg, #2f3640, #fbc531);
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  color: #333;
+}
+
+
+/* ------------------------------
+   Container
+-------------------------------- */
+.container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center form and list */
+}
+
+/* ------------------------------
+   Page Title
+-------------------------------- */
+h1 {
+  text-align: center;
+  color: #2f3640; /* dark text */
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+}
+
+/* ------------------------------
+   Form Styles
+-------------------------------- */
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+form:hover {
+  transform: scale(1.01);
+}
+
+form input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+form input:focus {
+  outline: none;
+  border-color: #2f3640;
+  box-shadow: 0 0 5px rgba(47,54,64,0.3);
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2f3640;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+form button:hover {
+  background-color: #353b48;
+  transform: scale(1.03);
+}
+
+/* ------------------------------
+   Book List
+-------------------------------- */
+.book-list {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center; /* center all book cards */
+}
+
+.book-item {
+  background: white;
+  padding: 18px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+}
+.book-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.book-item b {
+  font-size: 1.1rem;
+  color: #2f3640;
+}
+
+/* ------------------------------
+   Actions Buttons
+-------------------------------- */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.actions button:hover {
+  transform: scale(1.05);
+}
+
+/* Edit button */
+.actions button:first-child {
+  background-color: #fbc531;
+  color: #2f3640;
+}
+.actions button:first-child:hover {
+  background-color: #e1b12c;
+}
+
+/* Delete button */
+.actions button:last-child {
+  background-color: #e84118;
+  color: white;
+}
+.actions button:last-child:hover {
+  background-color: #c23616;
+}
+
+/* ------------------------------
+   Animation for new/updated books
+-------------------------------- */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-pop {
+  animation: pop 0.3s ease-in-out;
+}
+
+/* ------------------------------
+   Responsive Design
+-------------------------------- */
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  form, .book-item {
+    width: 90%;
+  }
+  .actions {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+/* Tablet (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  form, .book-item {
+    width: 80%;
+  }
+}
+
+/* Laptops & Desktops (769px and up) */
+@media (min-width: 769px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  form, .book-item {
+    width: 100%;
+  }
+}
+
